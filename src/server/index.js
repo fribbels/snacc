@@ -128,9 +128,12 @@ promise.then((result) => {
 
 /*
 
-- Fridge toText: Refactor list text
+- Fridge toText: Refactor list text to normal english
     Add "and" in "found one x, one y, AND one z"
     Dont print extra comma
+
+- Fridge: Sort by expiry date
+    "What's in the fridge" returns soonest to expire
 
 - Alexa add/remove: support quantities
     Put TWO grapes
@@ -158,5 +161,13 @@ promise.then((result) => {
 - Learning: Learn quantities
 
 - Alexa: Swtich to ddb attribute syntax
+
+- Alexa: Each item needs its own expiry date:
+    Buy two bunches of grapes at different times, one expires sooner
+
+- Alexa: Dialog - asking if the food is gone after eating
+    I ate the grapes -> All of them? -> No there's half left
+
+- Raspberry Po: Trigger alexa
 
 */
