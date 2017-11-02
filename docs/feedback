@@ -1,0 +1,13 @@
+Feedback:
+
+-The idea for a fridge/food management app through Alexa is solid. > We will be proceeding with the app idea.
+-The app needs to be more specific: What can users do? What are the layers of interactions they can have with the app? How will the interaction be useful to users? 
+-The proposal should separate the stretch goals from the main components of the app.
+-A stretch goal could be a recipe planner. You say you want to cook something, and Alexa figures out what you can cook based on what's in your fridge. It could also enable substitutions if you're missing an ingredient. 
+-A hardware goal could be to connect a raspberry pi to the Alexa skill, and detect when the door opens to trigger Alexa to ask if there are any fridge updates.
+
+Changes:
+
+We will be continuing with the app idea. We added a section talking about how users specifically interact with Alexa. It includes a description of how the raspberry pi, and a possible web interface for a list of fridge items.
+
+We also added a section to separate out the stretch goals in the proposal. The idea for a recipe engine was interesting and we would like to pursue that as one of the stretch goals. Another stretch goal could be a nutrition tracker to monitor daily nutrient intake of users.

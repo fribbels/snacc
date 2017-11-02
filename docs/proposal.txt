@@ -1,26 +1,27 @@
 Snacc
 Food and Nutrition Management Using Alexa
+ 
+Our mission is to create a food management application that tracks the food in the fridge and, through Alexa,  makes suggestions on what to eat and buy based on the food’s expiration date and nutrition.  Our ultimate goal is to save families money and improve their eating habits by Spring 2018.
+ 
+Families often buy unhealthy foods because healthier foods might not be eaten during their shorter expiration period. They don’t want to waste money on food they aren’t going to eat, which can result in unhealthy diets. The purpose of this app is to make healthy food management easier.
 
-Our mission is to create a food management application that tracks the food in the fridge and, through Alexa,  makes suggestions on what to eat and buy based on the food’s expiration date and nutrition.  Our ultimate goal is to  save families money and improve their eating habits by Spring 2018.
-
-Families often buy unhealthy foods because healthier foods might not be eaten during their shorter expiration period. They don’t want to waste money on food they aren’t going to eat, which can result in unhealthy diets. The goal of this app is to make healthy food management easier.
-
-We want to create a smart-home environment that helps users track their food consumption and the impact it has on their health. Our main purpose is to help users stay aware of their diet, while encouraging them to improve eating habits through a convenient Alexa and web interface. The usability of the app is our highest concern, and we want users to be able to navigate the app effortlessly through voice. This project will empower users to care more about their health and be able to benefit accordingly.
-
-This food management app is meant for small families trying to save money and eat healthier. The family as a whole will benefit monetarily by actually using the food they buy, and each individual member will benefit from eating more nutritional meals. It can also be used by people wanting to keep track of what food they have in their fridge without having to constantly check.
-
+We want to create a smart-home environment that helps users track their food consumption and the impact it has on their health. Our main intent is to help users stay aware of their diet, while encouraging them to improve eating habits through a convenient Alexa and user interface. Users can tell Alexa what they have taken out of or put in the fridge and when to use it by. An rPi will indicate to Alexa when the fridge has been opened, and Alexa will tell the user to use any food that is close to expiration. A user can open a interface to see a list of food, when it expires, and its nutritional value. The usability of the app is our highest concern, and we want users to be able to navigate the app effortlessly through voice. This project will empower users to care more about their health and be able to benefit accordingly.
+ 
+This food management app is meant for small families trying to save money and eat healthier. The family as a whole will benefit monetarily by actually using the food they buy, and each individual member will benefit from eating more nutritious meals. It can also be used by people wanting to keep track of what food they have in their fridge without having to constantly check.
+ 
 Building the infrastructure to run this app will not be an easy task. There are plenty of areas that we have not explored yet, but we intend to dig deeper and learn more about designing and creating a working product. We foresee three main pieces of the app that will need to be built. The first one is the backend server, hosting the logic and the data for the app. Next is the Alexa interface, which communicates with our backend, as well as with Amazon’s API through user interaction. We will also have a web interface for the user to visualize their health progress and bring the app with them even when they’re not at home. Our team is ready to research all three aspects of the project and learn what is required to begin building it.
-
+ 
 Challenges that we will face in this project include designing a flexible, yet easy to use interface, building a scalable architecture to allow for growth, and gathering and manipulating data for the backend. We want the app to be regularly used by people in their homes, meaning that uptime and data security are also concerns to be aware of. In terms of cost, prototyping the project will involve purchasing an Alexa product to test on, as well as API, storage, or cloud processing fees we will incur. This app has many different components which can all take a large amount of time to build. We will be spending the fall semester designing and prototyping parts of the project, and the spring semester putting everything together as a working product.
-
+ 
 The risks of this project largely lie in the unknowns. We have our plans for the functionality and architecture of this project, but we have yet to test out the Alexa API. In addition to this, our algorithms that will monitor food consumption is still under development. Given these unknowns, we need to prepare contingencies for potential issues.
-
+ 
 Our plan to mitigate these risks is to prototype early and often. By creating quick proof-of-concepts, we quickly eliminate unknowns and test out the relevant API calls or hardware. This helps us to detect potential roadblocks early one and plan for them accordingly.
-
+ 
 If our mitigation attempts do not work and we are faced with a risk, we must address it directly. As we currently are developing both a web interface as well as an Alexa skill, should one prove to be too bug-ridden or difficult, we can pivot and focus on the other instead.
-
+ 
 In developing this product, some ethical issues regarding food safety may arise. These issues could manifest in the form of dietary restrictions (due to allergies, intolerances, religion, etc) or spoiled food. Ethically, we must discover how to balance the goal of the user with the restrictions or nutrition requirements he or she may face. In order to not endanger any user, we must perform strict and thorough research into health, nutrition, and food safety standards. We can only move forward with our development when we safely and surely address these concerns.
 
+If all goes well, we have additional stretch goals to complete. One useful addition to this app would be a recipe recommendation engine. This would take into account the food in the household’s fridge, as well as their desired nutritional data, and generate healthy recipes for the users to make. Another addition tied to this idea would be a nutrition tracker that allows users to monitor their daily intake of nutrients.
+ 
 With this project, success is an app whose interface allows users to keep track of the food that they have on hand. The goal is to have two interfaces: a verbal interface through Alexa, and a visual interface through a web browser. Ideally, both will be attainable, but prioritizing one also falls within our definition of success.
-
-
+ 
