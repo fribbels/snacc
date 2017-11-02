@@ -157,5 +157,6 @@ promise.then((result) => {
 
 - Learning: Learn quantities
 
+- Alexa: Swtich to ddb attribute syntax
 
 */
