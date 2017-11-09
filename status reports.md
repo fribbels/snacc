@@ -13,3 +13,5 @@ Alexa, what's in the fridge?
 > There is a grapefruit in the fridge.
 
 We're still looking for a sponsor for the project. We have a few meetings lined up next week with professors to see if they're interested. We talked to Soha as a potential sponsor and she gave us a lot of feedback on the project design, as well as possible extensions or roadblocks along the way. She's not the official sponsor but we took her feedback and wrote an updated proposal using it.
+
+11/8/17

@@ -1,173 +1,30 @@
-var Alexa = require('alexa-sdk');
-var Fridge = require('./fridge.js');
-var ddb = require('./ddb.js');
+var alexa_sdk = require('alexa-sdk');
 
-//=============================== Handlers =====================================
-
-function launchRequestHandler() {
-    this.emit(':tell', 'Welcome to snack test');
-}
-
-function whatsInTheFridgeIntentHandler() {
-    var readPromise = ddb.get("UserData", {
-        userid: getUserId(this)
-    });
-
-    readPromise.then((result) => {
-        var fridge = new Fridge(result.Item.fridgeItems);
-        var text = fridge.toText();
-
-        this.emit(':tell', "I found " + text + " in the fridge.");
-    }).catch((error) => {
-        console.log(error);
-        this.emit(':tell', "Error reading the fridge " + error);
-    });
-}
-
-function addToTheFridgeIntentHandler() {
-    var newItem = getSlots(this).fridgeItem.value;
-
-    var readPromise = ddb.get("UserData", {
-        userid: getUserId(this)
-    });
-
-    readPromise.then((result) => {
-        var fridge = new Fridge(result.Item.fridgeItems);
-        fridge.add(newItem);
-
-        var writePromise = ddb.put("UserData", {
-            userid: getUserId(this),
-            fridgeItems: fridge.encode()
-        })
-
-        writePromise.then((result) => {
-            this.emit(':tell', "Adding " + newItem + " to the fridge.");
-        }).catch((error) => {
-            console.log(error);
-            this.emit(':tell', "Error adding " + newItem + " to the fridge.");
-        })
-    }).catch((error) => {
-        console.log(error);
-        this.emit(':tell', "Error reading the fridge " + error);
-    });
-}
-
-function removeFromTheFridgeIntentHandler() {
-    var item = getSlots(this).fridgeItem.value;
-
-    var readPromise = ddb.get("UserData", {
-        userid: getUserId(this)
-    });
-
-    readPromise.then((result) => {
-        var fridge = new Fridge(result.Item.fridgeItems);
-        fridge.remove(item);
-
-        var writePromise = ddb.put("UserData", {
-            userid: getUserId(this),
-            fridgeItems: fridge.encode()
-        })
-
-        writePromise.then((result) => {
-            this.emit(':tell', "Removing " + item + " from the fridge.");
-        }).catch((error) => {
-            console.log(error);
-            this.emit(':tell', "Error removing " + item + " from the fridge.");
-        })
-    }).catch((error) => {
-        console.log(error);
-        this.emit(':tell', "Error reading the fridge " + error);
-    });
-}
-
-//=============================== Helpers ======================================
-
-function getUserId(self) {
-    return self.event.session.user.userId;
-}
-
-function getSlots(self) {
-    return self.event.request.intent.slots;
-}
-
-//=============================== Exports=======================================
+var launchRequest = require('./intents/launchRequest.js');
+var helloWorldIntent = require('./intents/helloWorldIntent.js');
+var whatsInTheFridgeIntent = require('./intents/whatsInTheFridgeIntent.js');
+var addToTheFridgeIntent = require('./intents/addToTheFridgeIntent.js');
+var removeFromTheFridgeIntent = require('./intents/removeFromTheFridgeIntent.js');
+var addQuantityIntent = require('./intents/addQuantityIntent.js');
 
 var handlers = {
-    'LaunchRequest': launchRequestHandler,
-    'AddToTheFridgeIntent': addToTheFridgeIntentHandler,
-    'WhatsInTheFridgeIntent': whatsInTheFridgeIntentHandler,
-    'RemoveFromTheFridgeIntent': removeFromTheFridgeIntentHandler
+    'LaunchRequest': launchRequest.handler,
+    'HelloWorldIntent': helloWorldIntent.handler,
+    'AddToTheFridgeIntent': addToTheFridgeIntent.handler,
+    'WhatsInTheFridgeIntent': whatsInTheFridgeIntent.handler,
+    'RemoveFromTheFridgeIntent': removeFromTheFridgeIntent.handler,
+    'AddQuantityIntent': addQuantityIntent.handler
 };
 
 exports.handler = function(event, context, callback) {
     try {
-        var alexa = Alexa.handler(event, context);
+        var alexa = alexa_sdk.handler(event, context);
+
         alexa.registerHandlers(handlers);
         alexa.dynamoDBTableName = 'AlexaEvents'; 
         alexa.execute();
     } catch (err) {
-        console.log(error);
+        console.log(err);
         callback(err);
     }
 };
-
-//============================= Code templates =================================
-
-/*
-Promise sytax
---------------
-promise.then((result) => {
-    
-}).catch((error) => {
-    
-});
-
-*/
-
-//================================= TODOs ======================================
-
-/*
-
-- Fridge toText: Refactor list text to normal english
-    Add "and" in "found one x, one y, AND one z"
-    Dont print extra comma
-
-- Fridge: Sort by expiry date
-    "What's in the fridge" returns soonest to expire
-
-- Alexa add/remove: support quantities
-    Put TWO grapes
-
-- Fridge add/remove: support quantities
-
-- Alexa: ambiguous quantities
-    Put A BUNCH of grapes
-
-- Alexa interaction model: difersify utterances
-    Add grapes, got grapes, bought grapes
-
-- Alexa: Add expiration date database support
-
-- Alexa: Dialogue support with :asks
-    I bought grapes - how many grapes? A bunch
-
-- Alexa: Prefix support
-    Add a banana. Add an apple.
-
-- Alexa: State machine support
-
-- Alexa: Convert to session state
-
-- Learning: Learn quantities
-
-- Alexa: Swtich to ddb attribute syntax
-
-- Alexa: Each item needs its own expiry date:
-    Buy two bunches of grapes at different times, one expires sooner
-
-- Alexa: Dialog - asking if the food is gone after eating
-    I ate the grapes -> All of them? -> No there's half left
-
-- Raspberry Po: Trigger alexa
-
-*/
