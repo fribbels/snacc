@@ -17,3 +17,7 @@ We're still looking for a sponsor for the project. We have a few meetings lined 
 11/8/17
 
 This week we did more design work. We contacted some classmates and got their opinions on what they thought would be how they would use the app. We also looked more into the echo API and how it interacts with DynamoDB. We now have the alexa contacting our database and storing and reading information.
+
+11/15/17
+
+It was a slow week, team members were busy with interviews and exams. We have decided on Mark Hempstead as our advisor for the project. He provided good feedback on deciding what direction to take the project, and gave suggestions on how to narrow down the scope to achievable goals. The project will now be focused on automating food management: using sensors and Alexa to detect as much information as possible regarding food in the fridge. We are researching what sensors can be used to achieve this. The main goal right now is choosing a weight sensor that can be integration with a fridge, and ordering it to test on.
