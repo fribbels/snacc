@@ -21,3 +21,20 @@ This week we did more design work. We contacted some classmates and got their op
 11/15/17
 
 It was a slow week, team members were busy with interviews and exams. We have decided on Mark Hempstead as our advisor for the project. He provided good feedback on deciding what direction to take the project, and gave suggestions on how to narrow down the scope to achievable goals. The project will now be focused on automating food management: using sensors and Alexa to detect as much information as possible regarding food in the fridge. We are researching what sensors can be used to achieve this. The main goal right now is choosing a weight sensor that can be integration with a fridge, and ordering it to test on.
+
+11/22/17
+
+We talked with Prof. Hempstead this week and he encouraged us to flesh out the design more with a block diagram and start writing the interface for our various modules. 
+
+Block Diagram: https://drive.google.com/file/d/1rBR2DvjNLcfyNQfNLJhbuYg3nHoug9IG/view?usp=sharing
+
+Here are also a few more documents that we wrote for Prof. Hempstead's weekly meetings that are on our google drive.
+
+Problem research: https://docs.google.com/document/d/1DWAl6UQ7hJ7u3xRtziVPY1GFp25oXUQOsOMWbiMIHgw/edit?usp=sharing
+
+Design Specification: https://docs.google.com/document/d/1M4hBRmmy62RWy9NJv5-DHxRxAcAILHH9PZVxMYIZBb4/edit?usp=sharing
+
+Latest Project Plan: https://docs.google.com/document/d/1xOzTtBFsDZqvUeCu50BdHuBNCrwXx6Ed5iB2FFyamdg/edit?usp=sharing
+
+Risk Assessment: https://docs.google.com/spreadsheets/d/1JKvTBNisvh6KhJVUMb32tuj-hnweyex5eD6CuyoeCnQ/edit?usp=sharing
+
