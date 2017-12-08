@@ -38,3 +38,12 @@ Latest Project Plan: https://docs.google.com/document/d/1xOzTtBFsDZqvUeCu50BdHuB
 
 Risk Assessment: https://docs.google.com/spreadsheets/d/1JKvTBNisvh6KhJVUMb32tuj-hnweyex5eD6CuyoeCnQ/edit?usp=sharing
 
+11/29/17
+
+Thanksgiving break, we didn't meet this week. We ordered parts for the hardware prototype: force sensors, raspberry pi, load cells, infrared emitters/receivers and they will arrive next week.
+
+12/6/17
+
+The parts arrived, and Tom has begun building the prototype. We hooked up the infrared sensors and found out that their output values are much lower than expected. The max value we could get out of it was 6 of a possible 256. This is possibly due to the low voltage we have for the microcontroller. We're working on amplifying the signal to see if infrared is still viable.
+
+Justin and Ivan are planning the algorithm to be used to predict food coming in and out of the fridge. The initial idea is to use knn on position and weight features to get a candidate set from past historical purchases. Then the candidate set is scored based on confidence values calculated using the various sensors we have connected. The model can be trained through Alexa interaction or barcode scanning.
