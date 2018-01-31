@@ -47,3 +47,9 @@ Thanksgiving break, we didn't meet this week. We ordered parts for the hardware 
 The parts arrived, and Tom has begun building the prototype. We hooked up the infrared sensors and found out that their output values are much lower than expected. The max value we could get out of it was 6 of a possible 256. This is possibly due to the low voltage we have for the microcontroller. We're working on amplifying the signal to see if infrared is still viable.
 
 Justin and Ivan are planning the algorithm to be used to predict food coming in and out of the fridge. The initial idea is to use knn on position and weight features to get a candidate set from past historical purchases. Then the candidate set is scored based on confidence values calculated using the various sensors we have connected. The model can be trained through Alexa interaction or barcode scanning.
+
+== Winter Break ==
+
+1/31/18
+
+We have started up the weekly team meetings again and are beginning to plan out the schedule for the rest of the semester. The Technical Specification was updated with the feedback on the dossier. A section about team roles was added to the end, as well as a user stories section. We are splitting up what work to divide up between the team members. Ivan will be working on the Alexa/machine learning algorithm, Justin is starting on writing the UI in React, and Tom is working to build a new prototype for the shelf.
