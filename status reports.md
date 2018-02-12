@@ -53,3 +53,7 @@ Justin and Ivan are planning the algorithm to be used to predict food coming in 
 1/31/18
 
 We have started up the weekly team meetings again and are beginning to plan out the schedule for the rest of the semester. The Technical Specification was updated with the feedback on the dossier. A section about team roles was added to the end, as well as a user stories section. We are splitting up what work to divide up between the team members. Ivan will be working on the Alexa/machine learning algorithm, Justin is starting on writing the UI in React, and Tom is working to build a new prototype for the shelf.
+
+2/11/18
+
+This week we met to discuss progress. Everyone was mostly busy and not much work on the project this week. We met with Lasser and discussed plans for the prototype to present. It will be a larger version of the plastic board, up to 9in by 12 inches, with 3x4 pressure sensors. We think this is wide enough to give good demo of the capabilities yet small enough to feasibly build.
