@@ -57,3 +57,13 @@ We have started up the weekly team meetings again and are beginning to plan out 
 2/11/18
 
 This week we met to discuss progress. Everyone was mostly busy and not much work on the project this week. We met with Lasser and discussed plans for the prototype to present. It will be a larger version of the plastic board, up to 9in by 12 inches, with 3x4 pressure sensors. We think this is wide enough to give good demo of the capabilities yet small enough to feasibly build.
+
+3/5/18
+
+We had a few setbacks on the project recetly. First, our AWS secret key was accidentally leaked on GitHub. This was quickly found by bitcoin miners who used the key to do some free mining on the compute cloud. Our account got shut down by AWS and charged $2100, but after contacting customer service for a couple weeks we were able to get the charge removed. However, the account is still shut down and we were unable to retrieve a lot of the data. We're moving all our code and services to a new account and hopefully that one won't get leaked.
+
+Also there were schedule conflicts with our sponsor so we've been unable to meet for a while. We're meeting on Tuesday to discuss the progress and get suggestions with the prediction algorithm.
+
+So far we have a couple lambda functions taking in data from the hardware. They log the updates into a dynamodb table to have a list of all historic updates. Then we match new updates to the history to find a closest match in terms of weight and location in the fridge. The barcode scanner is integrated with a service called IceCat that provides a free API for UPC barcode lookups. 
+
+The main focus moving forward will be improving the prediction algorithm. We're still investigating ways to make it more accurate. 
