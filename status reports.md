@@ -67,3 +67,9 @@ Also there were schedule conflicts with our sponsor so we've been unable to meet
 So far we have a couple lambda functions taking in data from the hardware. They log the updates into a dynamodb table to have a list of all historic updates. Then we match new updates to the history to find a closest match in terms of weight and location in the fridge. The barcode scanner is integrated with a service called IceCat that provides a free API for UPC barcode lookups. 
 
 The main focus moving forward will be improving the prediction algorithm. We're still investigating ways to make it more accurate. 
+
+3/12/18
+
+We met with our sponsor this week to demonstrate the progress on the project. He suggested that we start looking into a well defined testing plan to make sure the project meets the specifications defined. We had given each other interfaces of what types of data are being sent to each other component, and this is a good place to start testing. The sponsor made the point that the components themselves might work fine on their own, but integrating them all will always cause problems. 
+
+We're working on individual tests for our components. For the cloud features, there are testing tools on AWS through sending test messages and events. The databases can be verified through through the AWS console. We have successfully wired up all the infrared sensors on the second prototype now. Testing showed that one of them did not work correctly as the gain was off, but we're placing it now. The next hardware step is to integrate and test the barcode scanner so that we can test real products together with the cloud.
