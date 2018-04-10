@@ -73,3 +73,12 @@ The main focus moving forward will be improving the prediction algorithm. We're 
 We met with our sponsor this week to demonstrate the progress on the project. He suggested that we start looking into a well defined testing plan to make sure the project meets the specifications defined. We had given each other interfaces of what types of data are being sent to each other component, and this is a good place to start testing. The sponsor made the point that the components themselves might work fine on their own, but integrating them all will always cause problems. 
 
 We're working on individual tests for our components. For the cloud features, there are testing tools on AWS through sending test messages and events. The databases can be verified through through the AWS console. We have successfully wired up all the infrared sensors on the second prototype now. Testing showed that one of them did not work correctly as the gain was off, but we're placing it now. The next hardware step is to integrate and test the barcode scanner so that we can test real products together with the cloud.
+
+4/9/18
+
+Our prediction algorithm is mostly finished now, the main piece left is to fiddle around with the weights experimentally to see what gets the best results. Currently mass difference and the shopping list is given high priority, so I'm testing to see if other combinations work well.
+
+The shelf is built and we are in the process of integrating the parts together. One main roadblock was the lack of a nutritional database for food expiration dates. The Alexa part of the app has functionality to allow users to input this data, so we will assume that data will only have to be inputted once, or already exists. 
+
+The testing plan moving forward is to set up an experiment with the prototype shelf. We will invite people to try the shelf, and pick 3 items from a variety of groceries on the shelf. The items are to be used to make a meal, and the participants are suggested to use items that are closer to expiration. One group will use the app/Alexa interface, and the control group will have to eyeball it like a normal fridge. The hypothesis is that the users using the app will be able to minimize the expiration risk of their fridge better than the users without it. This will help prove our point that the system helps reduce food waste in everyday peoples' lives.
+
